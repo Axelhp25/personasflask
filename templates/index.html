@@ -1,0 +1,24 @@
+{% extends 'layout.html'%}
+{%block title%}Index{%endblock%}
+
+{%block body%}
+<legend class="text-center text-primary">Listado de personas</legend>
+<table class="table container mt-2">
+    <thead class="table table-primary">
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+    </thead>
+    <tbody>
+      <tr class="table-active">
+        {%for i in listado:%}
+        <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+        </tr>
+        {%endfor%}
+      </tr>
+    </tbody>
+  </table>
+  {%endblock%}
